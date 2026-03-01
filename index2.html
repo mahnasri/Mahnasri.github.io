@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil - Nasri Mahieddine</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body class="accueil">
+  <nav>
+    <div class="brand">
+      <div class="logo">⚽</div>
+      <div>
+       <h1>Site de Mahieddine</h1>
+        <p class="subtitle">16 ans · Football & jeux vidéo</p>
+      </div>
+    </div>
+
+    <a class="active" href="index2.html">Accueil</a>
+    <a href="productions.html">Productions</a>
+    <a href="passions.html">Mes passions</a>
+    <a href="videos.html">Mes vidéos</a>
+
+    <hr>
+    <a href="site-de-reve/index.html">Mon site de rêve (Foot)</a>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <span class="badge">Projet Web (école)</span>
+      <h2>Bienvenue sur mon site</h2>
+      <p>Je m’appelle Nasri Mahieddine, j’ai 16 ans. J’aime le football et les jeux vidéo comme FIFA et GTA.</p>
+    </header>
+
+    <section class="section">
+      <span class="badge">Mon avatar</span>
+      <div class="grid">
+        <figure>
+          <img src="avatar.png" alt="Avatar IA de Nasri Mahieddine (cheveux bouclés, yeux marrons)">
+          <figcaption>Mon avatar </figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Soccer_ball.svg/640px-Soccer_ball.svg.png" alt="Ballon de football">
+          <figcaption>Ma passion n°1 : le football</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="badge">Musique de fond</span>
+
+      <audio id="bgMusic">
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+
+      <div class="audio-box" role="group" aria-label="Contrôles audio">
+        <button data-action="play" type="button">Play</button>
+        <button data-action="pause" type="button">Pause</button>
+        <button data-action="stop" type="button">Stop</button>
+      </div>
+
+      <p class="note">Mets un fichier <b>music.mp3</b> à la racine du site pour que ça marche.</p>
+    </section>
+
+    <footer>Site réalisé par Nasri Mahieddine — Projet école</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
