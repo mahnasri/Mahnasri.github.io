@@ -1,8 +1,17 @@
+/* ✅ GRILLE SNT (CSS)
+- Polices : Montserrat (texte) + Oswald (titres)
+- Couleurs : variables + thèmes différents par page
+- Mise en page : menu fixe à gauche, sections en cartes
+- Médias : grille d’images, vidéos intégrées, audio
+- Responsive : adaptation mobile
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Oswald:wght@400;600;700&display=swap');
 
 *{ box-sizing: border-box; }
 html, body{ margin:0; padding:0; }
 
+/* ✅ Variables CSS : couleurs + polices du site */
 :root{
   --font-body: "Montserrat", Arial, sans-serif;
   --font-title: "Oswald", Arial, sans-serif;
@@ -21,12 +30,13 @@ html, body{ margin:0; padding:0; }
   --hover: #00e5ff;
 }
 
-/* THEMES (1 par page) */
+/* ✅ THEMES : une couleur différente par page (via class du <body>) */
 body.accueil{     --bg:#0b3d1a; --hover:#00e5ff; }  /* Accueil */
 body.productions{ --bg:#2b1b3a; --hover:#ffd166; }  /* Productions */
 body.passions{    --bg:#061a3a; --hover:#2bd9ff; }  /* Passions */
 body.videos{      --bg:#0b2a1a; --hover:#ff4d6d; }  /* Vidéos */
 
+/* ✅ Style global (fond + police + couleurs) */
 body{
   font-family: var(--font-body);
   color: var(--text);
@@ -38,7 +48,7 @@ body{
     var(--bg);
 }
 
-/* MENU GAUCHE */
+/* ✅ MENU GAUCHE : navigation fixe + liens relatifs */
 nav{
   position: fixed;
   top: 0; left: 0;
@@ -49,6 +59,7 @@ nav{
   border-right: var(--border);
 }
 
+/* ✅ Branding (logo + titre) */
 nav .brand{
   display:flex;
   align-items:center;
@@ -81,6 +92,7 @@ nav .subtitle{
   font-size: 13px;
 }
 
+/* ✅ Liens du menu : couleurs normales / visitées / survol */
 nav a{
   display:block;
   margin: 8px 0;
@@ -104,13 +116,14 @@ nav a.active{
   background: rgba(255,255,255,0.12);
 }
 
-/* CONTENU */
+/* ✅ CONTENU : décalage pour laisser la place au menu */
 main{
   margin-left: 270px;
   padding: 24px;
   max-width: 1100px;
 }
 
+/* ✅ Bloc d’accueil (hero) */
 header.hero{
   padding: 18px;
   border-radius: 18px;
@@ -130,6 +143,7 @@ header.hero p{
   color: var(--muted);
 }
 
+/* ✅ Sections : cartes (pour organiser le contenu) */
 .section{
   margin-top: 18px;
   padding: 18px;
@@ -139,6 +153,7 @@ header.hero p{
   box-shadow: var(--shadow);
 }
 
+/* ✅ Badge : petit titre de section */
 .badge{
   display:inline-block;
   padding: 6px 10px;
@@ -150,7 +165,7 @@ header.hero p{
   margin-bottom: 10px;
 }
 
-/* IMAGES */
+/* ✅ IMAGES : grille 2 colonnes (2x2 possible) */
 .grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -158,6 +173,7 @@ header.hero p{
   align-items: stretch;
 }
 
+/* ✅ Figure : cadre image + légende */
 figure{
   margin: 0;
   border-radius: 16px;
@@ -168,6 +184,7 @@ figure{
   flex-direction: column;
 }
 
+/* ✅ Images : même taille (aspect-ratio) */
 figure img{
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -181,7 +198,7 @@ figcaption{
   font-size: 13px;
 }
 
-/* VIDEOS */
+/* ✅ VIDEOS : iframe responsive (YouTube / Padlet) */
 .video{
   position: relative;
   width: 100%;
@@ -198,12 +215,14 @@ figcaption{
   height: 100%;
 }
 
-/* AUDIO */
+/* ✅ AUDIO : boutons play/pause/stop */
 .audio-box{
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
+
+/* ✅ Boutons */
 button{
   cursor: pointer;
   padding: 10px 12px;
@@ -218,6 +237,7 @@ button:hover{ background: rgba(255,255,255,0.18); }
 .note{ margin-top: 10px; color: var(--muted); font-size: 13px; }
 hr{ border: none; border-top: 1px solid rgba(255,255,255,0.14); margin: 14px 0; }
 
+/* ✅ Pied de page */
 footer{
   margin-top: 18px;
   padding: 14px 16px;
@@ -227,7 +247,7 @@ footer{
   color: var(--muted);
 }
 
-/* RESPONSIVE */
+/* ✅ RESPONSIVE : sur mobile, menu en haut + grille en 1 colonne */
 @media (max-width: 900px){
   nav{
     position: static;
@@ -238,4 +258,33 @@ footer{
   }
   main{ margin-left: 0; }
   .grid{ grid-template-columns: 1fr; }
+}
+
+/* ✅ AVATAR "sticker" : pas d'encadrement + contour blanc */
+figure.avatar{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+figure.avatar img{
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  border-radius: 26px;
+  display: block;
+  margin: 0 auto;
+  filter:
+    drop-shadow(0 0 0 8px #ffffff)
+    drop-shadow(0 14px 26px rgba(0,0,0,0.35));
+}
+
+figure.avatar figcaption{
+  text-align: center;
+  padding: 8px 0 0 0;
+  color: var(--muted);
 }

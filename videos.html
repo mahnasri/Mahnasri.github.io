@@ -8,54 +8,72 @@
 </head>
 
 <body class="videos">
-  <nav>
-    <div class="brand">
-      <div class="logo">🎬</div>
-      <div>
-       <h1>Site de Mahieddine</h1>
-        <p class="subtitle">16 ans · Foot & Gaming</p>
-      </div>
+
+<!-- ✅ PAGE VIDEOS :
+- Liens relatifs (menu)
+- Intégration de vidéos YouTube (iframe)
+- Utilisation de balises section / div / iframe
+-->
+
+<nav>
+  <div class="brand">
+    <div class="logo">🎬</div>
+    <div>
+      <h1>Site de Mahieddine</h1>
+      <p class="subtitle">16 ans · Foot & Gaming</p>
     </div>
+  </div>
 
-    <a href="index2.html">Accueil</a>
-    <a href="productions.html">Productions scolaires</a>
-    <a href="passions.html">Mes passions</a>
-    <a class="active" href="videos.html">Mes vidéos</a>
+  <a href="index2.html">Accueil</a>
+  <a href="productions.html">Productions scolaires</a>
+  <a href="passions.html">Mes passions</a>
+  <a class="active" href="videos.html">Mes vidéos</a>
 
-    <hr>
-    <a href="site-de-reve/index.html">Mon site de rêve (Foot)</a>
-  </nav>
+  <hr>
+  <a href="site-de-reve/index.html">Mon site de rêve (Foot)</a>
+</nav>
 
-  <main>
-    <header class="hero">
-      <span class="badge">Vidéos</span>
-      <h2>Mes vidéos</h2>
-      <p>Des vidéos sur le football et les jeux vidéo (FIFA, GTA…).</p>
-    </header>
+<main>
+  <header class="hero">
+    <span class="badge">Vidéos</span>
+    <h2>Mes vidéos</h2>
+    <p>Des vidéos sur le football et les jeux vidéo (FIFA, GTA…).</p>
+  </header>
 
-    <section class="section">
-      <span class="badge">⚽ Football</span>
-      <div class="video" style="margin-top:12px;">
-        <!-- Remplace le src par TON lien embed -->
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/kVBFXwIKhug?si=5E3eUOra6w9H2R82" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- ✅ Vidéo YouTube (football) -->
+  <section class="section">
+    <span class="badge">⚽ Football</span>
+ <div class="video">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/7FXpeOa3lHo?si=mBlcuicUM-zcI8ee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+ </iframe>
+</div>
+
+  </section>
+
+  <!-- ✅ Deux vidéos YouTube (gaming) -->
+  <section class="section">
+    <span class="badge">🎮 Gaming</span>
+    <div class="grid">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/kLJV31_PNFc"
+          title="Vidéo FIFA"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
       </div>
-    
-    </section>
 
-    <section class="section">
-      <span class="badge">🎮 Gaming</span>
-      <div class="grid">
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/kLJV31_PNFc?si=n5lR-Ry5Lb-Zclqi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+<div class="video">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/QdBZY2fkU-0"
+    title="Grand Theft Auto VI - Trailer 1"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+  </section>
 
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/TDacHYlYPFM?si=fvzCu5PMx7B5uIXK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <footer>Page Vidéos — Nasri Mahieddine</footer>
-  </main>
+  <footer>Page Vidéos — Nasri Mahieddine</footer>
+</main>
 </body>
 </html>
