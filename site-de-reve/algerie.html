@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🇩🇿 Algérie - Monde du Foot</title>
+
+  <!-- ✅ Lien relatif vers le fichier CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="algerie">
+
+<!-- ✅ PAGE ALGÉRIE :
+- Liens relatifs (menu)
+- Liste HTML (ul / li)
+- Images en grille
+- Vidéo YouTube (iframe)
+- Lien absolu (FIFA)
+-->
+
+<!-- ✅ MENU : navigation entre les pages -->
+<nav>
+  <div class="brand">
+    <div class="logo">🇩🇿</div>
+    <div>
+      <h1>Monde du Foot</h1>
+      <p class="subtitle">Les Fennecs</p>
+    </div>
+  </div>
+
+  <a href="./index.html">🏠 Accueil</a>
+  <a href="./foot.html">🔵 Foot (UCL)</a>
+  <a href="./coupe-du-monde.html">🏆 Coupe du Monde</a>
+  <a class="active" href="./algerie.html">🇩🇿 Algérie</a>
+</nav>
+
+<main>
+  <header class="hero">
+    <h2>L’équipe nationale d’Algérie 🇩🇿</h2>
+    <p>
+      L’équipe d’Algérie, surnommée <strong>les Fennecs</strong>, représente le pays dans les grandes compétitions
+      comme la <strong>CAN</strong> et les <strong>qualifications</strong> pour la Coupe du Monde.
+    </p>
+  </header>
+
+  <!-- ✅ Section identité + liste HTML -->
+  <section class="section">
+    <span class="badge">📌 Identité et style de jeu</span>
+    <p>
+      Une sélection nationale doit construire un groupe solide : défense organisée, milieux capables de récupérer
+      et d’attaquer, et des attaquants efficaces. L’Algérie est connue pour ses supporters très passionnés
+      et une vraie fierté nationale.
+    </p>
+
+    <!-- ✅ Liste non ordonnée -->
+    <ul>
+      <li><strong>Surnom :</strong> Les Fennecs</li>
+      <li><strong>Confédération :</strong> CAF (Afrique)</li>
+      <li><strong>Objectif :</strong> se qualifier et performer dans les compétitions</li>
+    </ul>
+  </section>
+
+  <!-- ✅ Section images (grille 2 colonnes) -->
+  <section class="section">
+    <span class="badge">📸 Images</span>
+    <div class="grid">
+      <figure>
+        <img src="./fennec.jpg" alt="Fennec : renard représentant l'équipe nationale d'Algérie">
+        <figcaption>Supporters : énergie et fierté 🇩🇿</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://pbs.twimg.com/media/EAEgo6xXsAAn1bi.jpg" alt="Action de football (image symbolique)">
+        <figcaption>Combat sur le terrain : l’esprit des Fennecs</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ✅ Vidéo YouTube intégrée (iframe) -->
+  <section class="section">
+    <span class="badge">🎥 Hymne national algérien</span>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/qJxnjFbic1g"
+        title="Vidéo Algérie (football)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- ✅ Lien absolu vers YouTube si problème -->
+    <p class="note">
+      Si la vidéo ne s’affiche pas :
+      <a href="https://youtu.be/qJxnjFbic1g" target="_blank" rel="noopener">
+        regarder sur YouTube
+      </a>.
+    </p>
+  </section>
+
+  <!-- ✅ Lien absolu externe -->
+  <footer>
+    Lien absolu :
+    <a href="https://www.fifa.com" target="_blank" rel="noopener">FIFA</a>
+  </footer>
+
+</main>
+
+</body>
+</html>

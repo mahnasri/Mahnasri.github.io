@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Monde du Foot</title>
+
+  <!-- ✅ CSS (lien relatif) -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="home">
+
+<!-- ✅ GRILLE SNT (SITE DE RÊVE) :
+- Plusieurs pages : index.html / foot.html / coupe-du-monde.html / algerie.html
+- Liens relatifs : menu de navigation (./foot.html etc.)
+- Lien absolu : FIFA (https://www.fifa.com)
+- Médias : images + audio (hymne national)
+-->
+
+<!-- ✅ MENU : liens relatifs entre pages -->
+<nav>
+  <div class="brand">
+    <div class="logo">⚽</div>
+    <div>
+      <h1>Monde du Foot</h1>
+      <p class="subtitle">Accueil</p>
+    </div>
+  </div>
+
+  <a class="active" href="./index.html">🏠 Accueil</a>
+  <a href="./foot.html">🔵 Foot (UCL)</a>
+  <a href="./coupe-du-monde.html">🏆 Coupe du Monde</a>
+  <a href="./algerie.html">🇩🇿 Algérie</a>
+</nav>
+
+<main>
+  <header class="hero">
+    <h2>Bienvenue sur mon mini-site Football ! ⚽</h2>
+    <p>
+      Sur ce site, je présente le football : <strong>les bases</strong>, la <strong>Coupe du Monde 2026</strong> 🏆
+      et l’équipe nationale d’Algérie 🇩🇿.
+    </p>
+  </header>
+
+  <!-- ✅ AUDIO : hymne national + boutons play/pause/stop -->
+  <section class="section">
+    <span class="badge">Hymne national Algérien 🇩🇿</span>
+
+    <!-- ✅ Audio (fichier local dans le même dossier) -->
+    <audio id="bgMusic" preload="auto">
+      <source src="kassaman.ogg" type="audio/ogg">
+      Votre navigateur ne supporte pas l’élément audio.
+    </audio>
+
+    <!-- ✅ Boutons de contrôle audio (JavaScript en bas de page) -->
+    <div class="audio-box">
+      <button id="btnPlay">▶ Play</button>
+      <button id="btnPause">⏸ Pause</button>
+      <button id="btnStop">⏹ Stop</button>
+    </div>
+  </section>
+
+  <!-- ✅ IMAGES : grille 2×2 avec figure / img / figcaption -->
+  <section class="section">
+    <span class="badge">📸 Photos (thèmes des pages)</span>
+
+    <!-- ✅ 4 images : grille (2 colonnes) -->
+    <div class="grid">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1200&q=70" alt="Ballon sur pelouse">
+        <figcaption>Les bases du football : Coupe du Monde ⚽</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./stade-fumigene.jpg" alt="Ambiance de stade avec fumigènes">
+        <figcaption>Ambiance dans le stade 🏟️🔥</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./entrainement.jpg" alt="Entraînement de football avec des hommes">
+        <figcaption>Travail à l’entraînement 🏋️</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./match.jpg" alt="Match de football : image d'un match">
+        <figcaption>Intensité pendant le match 🔥</figcaption>
+      </figure>
+    </div>
+
+    <hr>
+
+    <p class="note">
+      Sources images : photos libres via Unsplash (utilisation autorisée)
+    </p>
+  </section>
+
+  <footer>
+    <!-- ✅ Lien absolu : vers un site externe -->
+    Lien absolu : <a href="https://www.fifa.com" target="_blank" rel="noopener">Site officiel FIFA</a>
+  </footer>
+</main>
+
+<!-- ✅ JavaScript : contrôle des boutons play/pause/stop -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const music = document.getElementById("bgMusic");
+    document.getElementById("btnPlay").addEventListener("click", async () => {
+      try { await music.play(); } catch(e){ alert("Erreur audio : " + e.name); }
+    });
+    document.getElementById("btnPause").addEventListener("click", () => music.pause());
+    document.getElementById("btnStop").addEventListener("click", () => { music.pause(); music.currentTime = 0; });
+  });
+</script>
+
+</body>
+</html>

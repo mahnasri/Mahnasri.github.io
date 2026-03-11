@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Accueil - Site de Mahieddine</title>
+  <meta charset="utf-8" />
+
+  <!-- police principale du site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- lien vers mon style.css -->
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+  <!-- titre de la page d'accueil -->
+  <div id="entete-de-page">
+    <p>Accueil <br/></p>
+  </div>
+
+  <!-- la c'est mon menu avec plusieurs liens relatifs -->
+  <table id="bloc-menu" border="1">
+    <tr>
+      <th><a href="index.html">Accueil</a></th>
+      <th><a href="productions.html">Productions scolaires</a></th>
+      <th><a href="passions.html">Mes passions</a></th>
+      <th><a href="videos.html">Mes vidéos</a></th>
+      <th><a href="site-de-reve/index.html">Mon site de rêve</a></th>
+    </tr>
+  </table>
+  <br/>
+
+  <!-- partie principale avec image + un texte -->
+  <div id="contenu">
+    <div class="presentation">
+      <!-- mon avatar -->
+      <img src="avatar.png" alt="Mon avatar" class="arrondie">
+ <!-- ma présentation -->
+      <div class="texte-presentation">
+        <h2>Je me présente...</h2>
+        <p>
+          Je m’appelle Nasri Mahieddine, j’ai 16 ans et je suis élève de seconde au lycée Sacré-Cœur à Tourcoing.
+          Je suis quelqu’un de dynamique, curieux et motivé. J’aime apprendre de nouvelles choses,
+          surtout dans le domaine du numérique et de l’informatique.
+          Je m’intéresse aussi au sport et à tout ce qui touche au travail en équipe.
+          À travers ce site, je vous présente mes productions scolaires ainsi que ce que j’aime faire en dehors du lycée.
+        </p>
+      </div>
+    </div>
+
+    <!-- musique de fond -->
+    <div>
+      <audio id="zic" src="music.mp3"></audio>
+
+      <!-- boutons de lecture pause et stop -->
+      <div>
+        <a href="javascript:void(0)" onclick="changeState(0)" class="bouton">PLAY</a>
+        <a href="javascript:void(0)" onclick="changeState(1)" class="bouton">PAUSE</a>
+        <a href="javascript:void(0)" onclick="changeState(2)" class="bouton active">STOP</a>
+      </div>
+
+      <script>
+        // petit script pour play pause stop
+        function changeState(x) {
+          let boutons = document.querySelectorAll(".bouton");
+          let audio = document.querySelector("#zic");
+
+          for (let i = 0; i < boutons.length; i++) {
+            boutons[i].classList.remove("active");
+          }
+
+          boutons[x].classList.add("active");
+
+          if (x == 0) {
+            audio.play();
+          }
+          if (x == 1) {
+            audio.pause();
+          }
+          if (x == 2) {
+            audio.pause();
+            audio.currentTime = 0;
+          }
+        }
+      </script>
+    </div>
+
+    <hr>
+
+    <div id="infos">
+      <h3>A lire aussi :</h3>
+      <ul>
+        <!-- encore des liens relatifs vers mes autres pages -->
+        <li><a href="passions.html">Découvrir mes passions</a></li>
+        <li><a href="videos.html">Voir mes vidéos</a></li>
+        <li><a href="productions.html">Regarder mes productions scolaires</a></li>
+
+        <!-- ici c'est des liens absolus vers des vrais sites en rapport avec mes passions -->
+        <li><a href="https://www.realmadrid.com/" target="_blank">Site officiel du Real Madrid</a></li>
+        <li><a href="https://www.ea.com/fr-fr/games/ea-sports-fc" target="_blank">Site officiel EA SPORTS FC</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <br/>
+
+  <!-- pied de page -->
+  <div id="pied-de-page">
+    <p>
+      Projet SNT - Dernière mise à jour : 15/12/2025 <br/>
+      Les textes et images utilisés n'engagent que leur auteur : Mahieddine
+    </p>
+  </div>
+  <br/>
+
+</body>
+</html>

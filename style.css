@@ -1,0 +1,123 @@
+iframe {
+  height: 70vh;
+  width: 70%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #DCEEFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.presentation {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.presentation img {
+  width: 120px;
+  height: auto;
+}
+
+.texte-presentation {
+  flex: 1;
+  color: #123A6D;
+}
+
+th {
+  width: 500px;
+}
+
+ul {
+  list-style-image: url(puce-zelda.png);
+}
+
+#entete-de-page {
+  padding: 5px;
+  height: 100px;
+  background-color: #4A90E2;
+  font-size: 32px;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#bloc-menu {
+  height: 36px;
+  background-color: #2F6FB5;
+  color: white;
+}
+
+#contenu {
+  padding: 10px;
+  background-color: #DCEEFF;
+  color: #123A6D;
+}
+
+/* Images des pages passions */
+.image-passion {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 15px 0;
+  border-radius: 12px;
+}
+
+#infos {
+  color: #123A6D;
+  font-style: italic;
+}
+
+#pied-de-page {
+  padding: 5px;
+  background-color: #2F6FB5;
+  color: #FFFFFF;
+  font-size: 11px;
+}
+
+.bouton.active {
+  color: #7B3FE4;
+}
+
+.bouton {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 400;
+  color: #1E5AA8;
+  font-size: 4rem;
+  line-height: 2em;
+  margin: 0 20px;
+}
+
+.arrondie {
+  border-radius: 7px;
+}
+
+.arrondie1 {
+  border-radius: 100px;
+}
+
+a:link {
+  color: #123A6D;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2C3E73;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:active {
+  color: #7B3FE4;
+  text-decoration: none;
+}

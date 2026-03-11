@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coupe du Monde - Monde du Foot</title>
+
+  <!-- ✅ Lien relatif vers la feuille CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="coupe">
+
+<!-- ✅ PAGE COUPE DU MONDE :
+- Liens relatifs (menu)
+- Liste HTML (ul / li)
+- Images en grille
+- Lien absolu vers FIFA
+-->
+
+<!-- ✅ MENU : navigation entre les pages -->
+<nav>
+  <div class="brand">
+    <div class="logo">🏆</div>
+    <div>
+      <h1>Monde du Foot</h1>
+      <p class="subtitle">Coupe du Monde</p>
+    </div>
+  </div>
+
+  <a href="./index.html">🏠 Accueil</a>
+  <a href="./foot.html">🔵 Foot (UCL)</a>
+  <a class="active" href="./coupe-du-monde.html">🏆 Coupe du Monde</a>
+  <a href="./algerie.html">🇩🇿 Algérie</a>
+</nav>
+
+<main>
+  <header class="hero">
+    <h2>Coupe du Monde 2026 🏆</h2>
+    <p>
+      La Coupe du Monde est la compétition la plus prestigieuse du football. En <strong>2026</strong>,
+      elle se déroule dans <strong>3 pays</strong> : Canada, Mexique et États-Unis.
+    </p>
+  </header>
+
+  <!-- ✅ Section actualité + liste HTML -->
+  <section class="section">
+    <span class="badge">📰 Actualité (Mondial 2026)</span>
+    <p>
+      Le Mondial 2026 est très attendu car il change de format : il y aura <strong>48 équipes</strong>.
+      Les <strong>qualifications</strong> se jouent dans chaque continent et les sélections se battent pour obtenir leur place.
+      L’organisation s’appuie sur plusieurs stades et plusieurs villes, ce qui rend l’événement encore plus grand.
+    </p>
+
+    <!-- ✅ Liste non ordonnée -->
+    <ul>
+      <li><strong>Format :</strong> 48 équipes (nouvelle édition)</li>
+      <li><strong>Pays hôtes :</strong> Canada / Mexique / États-Unis</li>
+      <li><strong>Enjeux :</strong> préparation des équipes + stades + organisation</li>
+    </ul>
+
+    <!-- ✅ Opinion personnelle (argumentation) -->
+    <p class="note">
+      Les favoris de la Coupe du Monde 2026 sont la France et l’Espagne au vu de leurs effectifs complets et de leur qualité technique.
+      Elles ont un bon mélange d’expérience et de jeunes talents, ce qui peut faire la différence sur un tournoi long.
+      Je pense qu’elles peuvent aller très loin si elles restent régulières match après match.
+    </p>
+  </section>
+
+  <!-- ✅ Section images (grille 2 colonnes) -->
+  <section class="section">
+    <span class="badge">📸 Images</span>
+    <div class="grid">
+      <figure>
+        <img src="./cdm.jpg" alt="Coupe du Monde">
+        <figcaption>Le trophée : le rêve de toutes les nations</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./stadecdm.jpg" alt="Stade de football">
+        <figcaption>Ambiance mondiale et stades remplis</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ✅ Lien absolu vers site externe -->
+  <footer>
+    Lien absolu :
+    <a href="https://www.fifa.com" target="_blank" rel="noopener">FIFA</a>
+  </footer>
+
+</main>
+
+</body>
+</html>
